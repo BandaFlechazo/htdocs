@@ -310,6 +310,10 @@ main>#contenedor_del_menu_de_videos>.menu_de_videos>form>button>div.clip-miniatu
 ////////////////////////////////////////////////////////////////////////////////
 */
 
+span>#Download{
+	transform: rotate(90deg);
+}
+
 main>iframe{
 	max-width: 90%;
 	min-height: 676;

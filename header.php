@@ -1,8 +1,4 @@
 
-<?php 
-include_once "conection_database.php";
-//include_once "resource/php/navbar.php";
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -39,5 +35,6 @@ include_once "conection_database.php";
 			</div>
 		</header>
 		<?php
-			$database = file_get_contents(__DIR__."/resource/JSON/$name_pages.json");
+		if($name_pages != "Watch"){
+			$database = file_get_contents(__DIR__."/resource/JSON/$name_pages.json");}
 		?>

@@ -1,5 +1,6 @@
 <?php
 $name_videos = $_POST['name_video'];
+$pge = $_POST["pge"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -21,15 +22,30 @@ $name_videos = $_POST['name_video'];
 				<div class="name-page">
 					<h1><span>alequivocado</span><span class="tv">.TV</span></h1>
 				</div>
-				<nav id="navbar"></nav>
+				<nav id="navbar">
+					
+					<ul>
+						<li>
+							<a href="/Videos/<?php echo $pge;?>">
+								<= Regrasar
+							</a>
+						</li>
+						<li>
+							<?php
+								$codigo_video = $_POST['codigovideo'];
+								echo "<a href='https://www.y2mate.com/youtube/".$codigo_video."' target='_blank'>"; ?>
+								Descagar <span id="Download">=></span> 
+							</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</header>
         <main>
 <?php
-$codigo_video = $_POST['codigovideo'];
 
 echo "<iframe width='1500' height='676' src='https://www.youtube.com/embed/".$codigo_video."' title='".$name_videos."' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
 
-	echo "<a href='https://www.y2mate.com/youtube/".$codigo_video."' target='_blank'><h2>".$name_videos."</h2></a>";
+	echo "<h2>".$name_videos."</h2>";
 
 ?>
